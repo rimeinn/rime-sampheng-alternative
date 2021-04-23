@@ -1,4 +1,4 @@
-name: ci
+name: Generate `sampheng.custom.yaml`
 
 on:
   push:
@@ -13,6 +13,9 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.9'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install yaml
       - run: python build.py
       - uses: peaceiris/actions-gh-pages@v3
         with:
