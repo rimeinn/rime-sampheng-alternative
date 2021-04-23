@@ -1,0 +1,870 @@
+patch:
+  speller/alphabet: ;zyxwvutsrqponmlkjihgfedcba
+  speller/algebra:
+    - xform/(^| )d'ruen($| )/$1EOR$2/
+    - xform/(^| )t'rangx($| )/$1RKD$2/
+    - xform/(^| )thr'et($| )/$1TEQ$2/
+    - xform/(^| )thr'eh($| )/$1TEL$2/
+    - xform/(^| )tr'uaix($| )/$1RSI$2/
+    - xform/(^| )ch'ruad($| )/$1GLP$2/
+    - xform/(^| )z'ren($| )/$1DIR$2/
+    - xform/(^| )zr'uen($| )/$1DWR$2/
+    - xform/(^| )zr'ux($| )/$1DZK$2/
+    - xform/(^| )cj'ap($| )/$1VDZ$2/
+    - xform/(^| )chj'ai($| )/$1BDU$2/
+    - xform/(^| )chj'aix($| )/$1BDI$2/
+    - xform/(^| )chj'ren($| )/$1BIR$2/
+    - xform/(^| )zj'e($| )/$1CEJ$2/
+    - xform/(^| )zj'op($| )/$1CCZ$2/
+    - xform/(^| )sj'amx($| )/$1XDC$2/
+    - xform/(^| )nj'aix($| )/$1WDI$2/
+    - xform/(^| )nj'e($| )/$1WEJ$2/
+    - xform/(^| )nj'rat($| )/$1WKQ$2/
+    - xform/(^| )j'aix($| )/$1PDI$2/
+    - xform/(^| )i'uaix($| )/$1PSI$2/
+    - xform/j([aeou])/ji$1/
+    - xform/([iy])oi/$1ei/
+    - xform/([^aeo])u([xh]?)($| )/$1ou$2$3/
+    - xform/y([xh]?)($| )/iau$1$2/
+    - xform/(^| )ph/$1Y/
+    - xform/(^| )p/$1U/
+    - xform/(^| )b/$1I/
+    - xform/(^| )m/$1O/
+    - xform/(^| )([jiy])/$1P$2/
+    - xform/(^| )kh/$1H/
+    - xform/(^| )k/$1J/
+    - xform/(^| )g([^h])/$1K$2/
+    - xform/(^| )ng/$1L/
+    - xform/(^| )q/$1;/
+    - xform/(^| )gh/$1N/
+    - xform/(^| )h/$1M/
+    - xform/(^| )chj/$1B/
+    - xform/(^| )cj/$1V/
+    - xform/(^| )zj/$1C/
+    - xform/(^| )sj/$1X/
+    - xform/(^| )zsj/$1Z/
+    - xform/(^| )ch/$1G/
+    - xform/(^| )c/$1F/
+    - xform/(^| )z([^s])/$1D$2/
+    - xform/(^| )s/$1S/
+    - xform/(^| )zs/$1A/
+    - xform/(^| )th/$1T/
+    - xform/(^| )t/$1R/
+    - xform/(^| )d/$1E/
+    - xform/(^| )n/$1W/
+    - xform/(^| )l/$1Q/
+    - xform/d($| )/P$1/
+    - xform/m($| )/V$1/
+    - xform/mx($| )/C$1/
+    - xform/mh($| )/X$1/
+    - xform/p($| )/Z$1/
+    - xform/n($| )/R$1/
+    - xform/nx($| )/E$1/
+    - xform/nh($| )/W$1/
+    - xform/t($| )/Q$1/
+    - xform/ng($| )/F$1/
+    - xform/ngx($| )/D$1/
+    - xform/ngh($| )/S$1/
+    - xform/k($| )/A$1/
+    - xform/([aeo])u($| )/$1M$2/
+    - xform/([aeo])ux($| )/$1G$2/
+    - xform/([aeo])uh($| )/$1H$2/
+    - xform/([aeiy])i($| )/$1U$2/
+    - xform/([aeiy])ix($| )/$1I$2/
+    - xform/([aeiy])ih($| )/$1O$2/
+    - xform/h($| )/L$1/
+    - xform/x($| )/K$1/
+    - xform/([a-z])($| )/$1J$2/
+    - xform/rua/L/
+    - xform/ra/K/
+    - xform/([QrYUIOPHJKL;NM])ia/$1F/
+    - xform/ia/J/
+    - xform/([QrYUIOPHJKL;NM])ya/$1G/
+    - xform/ya/H/
+    - xform/ua/S/
+    - xform/a/D/
+    - xform/rue/O/
+    - xform/re/I/
+    - xform/([QrYUIOPHJKL;NM])ie/$1R/
+    - xform/ie/U/
+    - xform/([QrYUIOPHJKL;NM])ye/$1T/
+    - xform/ye/Y/
+    - xform/ue/W/
+    - xform/e/E/
+    - xform/([QrYUIOPHJKL;NM])i[ou]/$1V/
+    - xform/i[ou]/M/
+    - xform/([QrYUIOPHJKL;NM])y[ou]/$1B/
+    - xform/y[ou]/N/
+    - xform/uo/X/
+    - xform/o/C/
+    - xform/ru/H/
+    - xform/uu/P/
+    - xform/u/Z/
+    - xform/([QrYUIOPHJKL;NM])i/$1A/
+    - xform/([QrYUIOPHJKL;NM])y/$1Q/
+    - xform/i/;/
+    - xform/y/P/
+    - xform/[jr]//
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
+    - abbrev/^([a-z;]).+$/$1/
+  translator/preedit_format:
+    - xform/([\w;][\w;])r/$1N平/
+    - xform/([\w;][\w;])e/$1N上/
+    - xform/([\w;][\w;])w/$1N去/
+    - xform/([\w;][\w;])q/$1N入/
+    - xform/([\w;][\w;])f/$1Q平/
+    - xform/([\w;][\w;])d/$1Q上/
+    - xform/([\w;][\w;])s/$1Q去/
+    - xform/([\w;][\w;])a/$1Q入/
+    - xform/([\w;][\w;])v/$1M平/
+    - xform/([\w;][\w;])c/$1M上/
+    - xform/([\w;][\w;])x/$1M去/
+    - xform/([\w;][\w;])z/$1M入/
+    - xform/([\w;][\w;])u/$1I平/
+    - xform/([\w;][\w;])i/$1I上/
+    - xform/([\w;][\w;])o/$1I去/
+    - xform/([\w;][\w;])p/$1D去/
+    - xform/([\w;][\w;])j/$1O平/
+    - xform/([\w;][\w;])k/$1O上/
+    - xform/([\w;][\w;])l/$1O去/
+    - xform/([\w;][\w;])m/$1U平/
+    - xform/([\w;][\w;])g/$1U上/
+    - xform/([\w;][\w;])h/$1U去/
+    - xform/(^|[ '])t([ioklrtfgvbaq]|[ph]Q)/$1徹$2/
+    - xform/(^|[ '])r([ioklrtfgvbaq]|[ph]Q)/$1知$2/
+    - xform/(^|[ '])e([ioklrtfgvbaq]|[ph]Q)/$1澄$2/
+    - xform/(^|[ '])w([ioklrtfgvbaq]|[ph]Q)/$1娘$2/
+    - xform/(^|[ '])w([yuhjnmp;])/$1日$2/
+    - xform/(^|[ '])t/$1透/
+    - xform/(^|[ '])r/$1端/
+    - xform/(^|[ '])e/$1定/
+    - xform/(^|[ '])w/$1泥/
+    - xform/(^|[ '])q/$1來/
+    - xform/(^|[ '])g([ioklrtfgvbaq]|[ph]Q)/$1初$2/
+    - xform/(^|[ '])f([ioklrtfgvbaq]|[ph]Q)/$1莊$2/
+    - xform/(^|[ '])d([ioklrtfgvbaq]|[ph]Q)/$1崇$2/
+    - xform/(^|[ '])s([ioklrtfgvbaq]|[ph]Q)/$1生$2/
+    - xform/(^|[ '])a([ioklrtfgvbaq]|[ph]Q)/$1俟$2/
+    - xform/(^|[ '])g/$1清/
+    - xform/(^|[ '])f/$1精/
+    - xform/(^|[ '])d/$1從/
+    - xform/(^|[ '])s/$1心/
+    - xform/(^|[ '])a/$1邪/
+    - xform/(^|[ '])b/$1昌/
+    - xform/(^|[ '])v/$1章/
+    - xform/(^|[ '])c/$1常/
+    - xform/(^|[ '])x/$1書/
+    - xform/(^|[ '])z/$1船/
+    - xform/(^|[ '])y/$1滂/
+    - xform/(^|[ '])u/$1幫/
+    - xform/(^|[ '])i/$1並/
+    - xform/(^|[ '])o/$1明/
+    - xform/(^|[ '])p([yuhjnm;p])/$1以$2/
+    - xform/(^|[ '])p/$1云/
+    - xform/(^|[ '])h/$1溪/
+    - xform/(^|[ '])j/$1見/
+    - xform/(^|[ '])k/$1羣/
+    - xform/(^|[ '])l/$1疑/
+    - xform/(^|[ ']);/$1影/
+    - xform/(^|[ '])n/$1匣/
+    - xform/(^|[ '])m/$1曉/
+    - xform/dO/歌/
+    - xform/sO/¹ʷ戈/
+    - xform/([见溪羣疑])[fj]O/$1³戈/
+    - xform/[gh]O/³ʷ戈/
+    - xform/kO/²麻/
+    - xform/lO/²ʷ麻/
+    - xform/[fj]O/³麻/
+    - xform/cO/模/
+    - xform/[vm]O/魚/
+    - xform/[bn]O/虞/
+    - xform/dI/咍/
+    - xform/sI/灰/
+    - xform/kI/皆/
+    - xform/lI/ʷ皆/
+    - xform/iO/佳/
+    - xform/oO/ʷ佳/
+    - xform/eO/齊/
+    - xform/wO/ʷ齊/
+    - xform/dD/泰/
+    - xform/sD/ʷ泰/
+    - xform/kD/夬/
+    - xform/lD/ʷ夬/
+    - xform/[fj]D/廢/
+    - xform/[gh]D/ʷ廢/
+    - xform/([幫滂並明見溪羣疑影曉])rD/$1ᴮ祭/
+    - xform/([幫滂並明見溪羣疑影曉])uD/$1ᴬ祭/
+    - xform/[ru]D/祭/
+    - xform/([幫滂並明見溪羣疑影曉])tD/$1ᴮʷ祭/
+    - xform/([幫滂並明見溪羣疑影曉])yD/$1ᴬʷ祭/
+    - xform/[ty]D/ʷ祭/
+    - xform/([幫滂並明見溪羣疑影曉])rO/$1ᴮ支/
+    - xform/([幫滂並明見溪羣疑影曉])uO/$1ᴬ支/
+    - xform/[ru]O/支/
+    - xform/([幫滂並明見溪羣疑影曉])tO/$1ᴮʷ支/
+    - xform/([幫滂並明見溪羣疑影曉])yO/$1ᴬʷ支/
+    - xform/[ty]O/ʷ支/
+    - xform/([幫滂並明見溪羣疑影曉])aI/$1ᴮ脂/
+    - xform/([幫滂並明見溪羣疑影曉]);I/$1ᴬ脂/
+    - xform/[a;]I/脂/
+    - xform/([幫滂並明見溪羣疑影曉])qI/$1ᴮʷ脂/
+    - xform/([幫滂並明見溪羣疑影曉])pI/$1ᴬʷ脂/
+    - xform/[qp]I/ʷ脂/
+    - xform/[a;]O/之/
+    - xform/[ru]I/微/
+    - xform/[ty]I/ʷ微/
+    - xform/dU/豪/
+    - xform/kU/肴/
+    - xform/([幫滂並明見溪羣疑影曉])rU/$1ᴮ宵/
+    - xform/([幫滂並明見溪羣疑影曉])uU/$1ᴬ宵/
+    - xform/[ru]U/宵/
+    - xform/eU/蕭/
+    - xform/cU/侯/
+    - xform/[vm]U/尤/
+    - xform/[fj]U/幽/
+    - xform/dM/談/
+    - xform/cM/覃/
+    - xform/kM/銜/
+    - xform/iM/鹹/
+    - xform/([幫滂並明見溪羣疑影曉])rM/$1ᴮ鹽/
+    - xform/([幫滂並明見溪羣疑影曉])uM/$1ᴬ鹽/
+    - xform/[ru]M/鹽/
+    - xform/[fj]M/嚴/
+    - xform/[gh]M/凡/
+    - xform/eM/添/
+    - xform/([幫滂並明見溪羣疑影曉])aM/$1ᴮ侵/
+    - xform/([幫滂並明見溪羣疑影曉]);M/$1ᴬ侵/
+    - xform/[a;]M/侵/
+    - xform/dN/寒/
+    - xform/sN/桓/
+    - xform/kN/刪/
+    - xform/lN/ʷ刪/
+    - xform/iN/山/
+    - xform/oN/ʷ山/
+    - xform/[fj]N/元/
+    - xform/[gh]N/ʷ元/
+    - xform/([幫滂並明見溪羣疑影曉])rN/$1ᴮ仙/
+    - xform/([幫滂並明見溪羣疑影曉])uN/$1ᴬ仙/
+    - xform/[ru]N/仙/
+    - xform/([幫滂並明見溪羣疑影曉])tN/$1ᴮʷ仙/
+    - xform/([幫滂並明見溪羣疑影曉])yN/$1ᴬʷ仙/
+    - xform/[ty]N/ʷ仙/
+    - xform/eN/先/
+    - xform/wN/ʷ先/
+    - xform/cN/痕/
+    - xform/xN/魂/
+    - xform/[vm]N/欣/
+    - xform/[bn]N/文/
+    - xform/([莊崇初生俟])[a;]N/$1臻/
+    - xform/([幫滂並明見溪羣疑影曉])aN/$1ᴮ真/
+    - xform/([幫滂並明見溪羣疑影曉]);N/$1ᴬ真/
+    - xform/[a;]N/真/
+    - xform/([幫滂並明見溪羣疑影曉])qN/$1ᴮʷ真/
+    - xform/[qp]N/諄/
+    - xform/dQ/唐/
+    - xform/sQ/ʷ唐/
+    - xform/[fj]Q/陽/
+    - xform/gQ/ʷ陽/
+    - xform/hQ/江/
+    - xform/kQ/²庚/
+    - xform/lQ/²ʷ庚/
+    - xform/iQ/耕/
+    - xform/oQ/ʷ耕/
+    - xform/([幫滂並明見溪羣疑影曉])rQ/$1³庚/
+    - xform/([幫滂並明見溪羣疑影曉])tQ/$1³ʷ庚/
+    - xform/[ru]Q/清/
+    - xform/[ty]Q/ʷ清/
+    - xform/eQ/青/
+    - xform/wQ/ʷ青/
+    - xform/cQ/登/
+    - xform/xQ/ʷ登/
+    - xform/[a;]Q/蒸/
+    - xform/qQ/ʷ蒸/
+    - xform/zQ/¹東/
+    - xform/[vm]Q/³東/
+    - xform/pQ/冬/
+    - xform/[bn]Q/鍾/
+    - xform/平//
+    - xform/([祭泰夬废])去/$1/
+    - xform/歌上/哿/
+    - xform/歌去/个/
+    - xform/戈上/果/
+    - xform/戈去/过/
+    - xform/麻上/马/
+    - xform/麻去/祃/
+    - xform/模上/姥/
+    - xform/模去/暮/
+    - xform/魚上/語/
+    - xform/魚去/御/
+    - xform/虞上/麌/
+    - xform/虞去/遇/
+    - xform/咍上/海/
+    - xform/咍去/代/
+    - xform/灰上/贿/
+    - xform/灰去/隊/
+    - xform/佳上/蟹/
+    - xform/佳去/卦/
+    - xform/皆上/骇/
+    - xform/皆去/怪/
+    - xform/齊上/薺/
+    - xform/齊去/霽/
+    - xform/之上/止/
+    - xform/之去/志/
+    - xform/脂上/旨/
+    - xform/脂去/至/
+    - xform/支上/纸/
+    - xform/支去/寘/
+    - xform/微上/尾/
+    - xform/微去/未/
+    - xform/豪上/皓/
+    - xform/豪去/号/
+    - xform/肴上/巧/
+    - xform/肴去/效/
+    - xform/宵上/小/
+    - xform/宵去/笑/
+    - xform/蕭上/筱/
+    - xform/蕭去/嘯/
+    - xform/侯上/厚/
+    - xform/侯去/候/
+    - xform/尤上/有/
+    - xform/尤去/又/
+    - xform/幽上/黝/
+    - xform/幽去/幼/
+    - xform/寒上/旱/
+    - xform/寒去/翰/
+    - xform/寒入/曷/
+    - xform/桓上/缓/
+    - xform/桓去/换/
+    - xform/桓入/末/
+    - xform/刪上/潸/
+    - xform/刪去/諫/
+    - xform/刪入/鎋/
+    - xform/山上/產/
+    - xform/山去/襉/
+    - xform/山入/黠/
+    - xform/元上/阮/
+    - xform/元去/愿/
+    - xform/元入/月/
+    - xform/仙上/鮮/
+    - xform/仙去/線/
+    - xform/仙入/薛/
+    - xform/先上/銑/
+    - xform/先去/霰/
+    - xform/先入/屑/
+    - xform/痕上/很/
+    - xform/痕去/恨/
+    - xform/痕入/紇/
+    - xform/魂上/混/
+    - xform/魂去/慁/
+    - xform/魂入/沒/
+    - xform/真上/診/
+    - xform/真去/震/
+    - xform/真入/質/
+    - xform/臻上/？/
+    - xform/臻去/？/
+    - xform/臻入/櫛/
+    - xform/諄上/準/
+    - xform/諄去/稕/
+    - xform/諄入/術/
+    - xform/欣上/隱/
+    - xform/欣去/焮/
+    - xform/欣入/迄/
+    - xform/文上/吻/
+    - xform/文去/問/
+    - xform/文入/物/
+    - xform/談上/敢/
+    - xform/談去/闞/
+    - xform/談入/盍/
+    - xform/覃上/感/
+    - xform/覃去/勘/
+    - xform/覃入/合/
+    - xform/銜上/檻/
+    - xform/銜去/鑑/
+    - xform/銜入/狎/
+    - xform/鹹上/豏/
+    - xform/鹹去/陷/
+    - xform/鹹入/洽/
+    - xform/嚴上/儼/
+    - xform/嚴去/釅/
+    - xform/嚴入/業/
+    - xform/鹽上/琰/
+    - xform/鹽去/豔/
+    - xform/鹽入/葉/
+    - xform/凡上/范/
+    - xform/凡去/梵/
+    - xform/凡入/乏/
+    - xform/添上/忝/
+    - xform/添去/㮇/
+    - xform/添入/帖/
+    - xform/侵上/寢/
+    - xform/侵去/沁/
+    - xform/侵入/緝/
+    - xform/唐上/蕩/
+    - xform/唐去/宕/
+    - xform/唐入/鐸/
+    - xform/陽上/養/
+    - xform/陽去/樣/
+    - xform/陽入/藥/
+    - xform/江上/講/
+    - xform/江去/絳/
+    - xform/江入/覺/
+    - xform/庚上/梗/
+    - xform/庚去/敬/
+    - xform/庚入/陌/
+    - xform/耕上/耿/
+    - xform/耕去/諍/
+    - xform/耕入/麥/
+    - xform/清上/靜/
+    - xform/清去/淨/
+    - xform/清入/昔/
+    - xform/青上/迥/
+    - xform/青去/徑/
+    - xform/青入/錫/
+    - xform/登上/等/
+    - xform/登去/嶝/
+    - xform/登入/德/
+    - xform/蒸上/拯/
+    - xform/蒸去/證/
+    - xform/蒸入/職/
+    - xform/東上/懂/
+    - xform/東去/送/
+    - xform/東入/屋/
+    - xform/冬上/湩/
+    - xform/冬去/宋/
+    - xform/冬入/沃/
+    - xform/鍾上/腫/
+    - xform/鍾去/用/
+    - xform/鍾入/燭/
+  reverse_lookup/comment_format:
+    - xform/(^| )d'ruen($| )/$1EOR$2/
+    - xform/(^| )t'rangx($| )/$1RKD$2/
+    - xform/(^| )thr'et($| )/$1TEQ$2/
+    - xform/(^| )thr'eh($| )/$1TEL$2/
+    - xform/(^| )tr'uaix($| )/$1RSI$2/
+    - xform/(^| )ch'ruad($| )/$1GLP$2/
+    - xform/(^| )z'ren($| )/$1DIR$2/
+    - xform/(^| )zr'uen($| )/$1DWR$2/
+    - xform/(^| )zr'ux($| )/$1DZK$2/
+    - xform/(^| )cj'ap($| )/$1VDZ$2/
+    - xform/(^| )chj'ai($| )/$1BDU$2/
+    - xform/(^| )chj'aix($| )/$1BDI$2/
+    - xform/(^| )chj'ren($| )/$1BIR$2/
+    - xform/(^| )zj'e($| )/$1CEJ$2/
+    - xform/(^| )zj'op($| )/$1CCZ$2/
+    - xform/(^| )sj'amx($| )/$1XDC$2/
+    - xform/(^| )nj'aix($| )/$1WDI$2/
+    - xform/(^| )nj'e($| )/$1WEJ$2/
+    - xform/(^| )nj'rat($| )/$1WKQ$2/
+    - xform/(^| )j'aix($| )/$1PDI$2/
+    - xform/(^| )i'uaix($| )/$1PSI$2/
+    - xform/j([aeou])/ji$1/
+    - xform/([iy])oi/$1ei/
+    - xform/([^aeo])u([xh]?)($| )/$1ou$2$3/
+    - xform/y([xh]?)($| )/iau$1$2/
+    - xform/(^| )ph/$1Y/
+    - xform/(^| )p/$1U/
+    - xform/(^| )b/$1I/
+    - xform/(^| )m/$1O/
+    - xform/(^| )([jiy])/$1P$2/
+    - xform/(^| )kh/$1H/
+    - xform/(^| )k/$1J/
+    - xform/(^| )g([^h])/$1K$2/
+    - xform/(^| )ng/$1L/
+    - xform/(^| )q/$1;/
+    - xform/(^| )gh/$1N/
+    - xform/(^| )h/$1M/
+    - xform/(^| )chj/$1B/
+    - xform/(^| )cj/$1V/
+    - xform/(^| )zj/$1C/
+    - xform/(^| )sj/$1X/
+    - xform/(^| )zsj/$1Z/
+    - xform/(^| )ch/$1G/
+    - xform/(^| )c/$1F/
+    - xform/(^| )z([^s])/$1D$2/
+    - xform/(^| )s/$1S/
+    - xform/(^| )zs/$1A/
+    - xform/(^| )th/$1T/
+    - xform/(^| )t/$1R/
+    - xform/(^| )d/$1E/
+    - xform/(^| )n/$1W/
+    - xform/(^| )l/$1Q/
+    - xform/d($| )/P$1/
+    - xform/m($| )/V$1/
+    - xform/mx($| )/C$1/
+    - xform/mh($| )/X$1/
+    - xform/p($| )/Z$1/
+    - xform/n($| )/R$1/
+    - xform/nx($| )/E$1/
+    - xform/nh($| )/W$1/
+    - xform/t($| )/Q$1/
+    - xform/ng($| )/F$1/
+    - xform/ngx($| )/D$1/
+    - xform/ngh($| )/S$1/
+    - xform/k($| )/A$1/
+    - xform/([aeo])u($| )/$1M$2/
+    - xform/([aeo])ux($| )/$1G$2/
+    - xform/([aeo])uh($| )/$1H$2/
+    - xform/([aeiy])i($| )/$1U$2/
+    - xform/([aeiy])ix($| )/$1I$2/
+    - xform/([aeiy])ih($| )/$1O$2/
+    - xform/h($| )/L$1/
+    - xform/x($| )/K$1/
+    - xform/([a-z])($| )/$1J$2/
+    - xform/rua/L/
+    - xform/ra/K/
+    - xform/([QrYUIOPHJKL;NM])ia/$1F/
+    - xform/ia/J/
+    - xform/([QrYUIOPHJKL;NM])ya/$1G/
+    - xform/ya/H/
+    - xform/ua/S/
+    - xform/a/D/
+    - xform/rue/O/
+    - xform/re/I/
+    - xform/([QrYUIOPHJKL;NM])ie/$1R/
+    - xform/ie/U/
+    - xform/([QrYUIOPHJKL;NM])ye/$1T/
+    - xform/ye/Y/
+    - xform/ue/W/
+    - xform/e/E/
+    - xform/([QrYUIOPHJKL;NM])i[ou]/$1V/
+    - xform/i[ou]/M/
+    - xform/([QrYUIOPHJKL;NM])y[ou]/$1B/
+    - xform/y[ou]/N/
+    - xform/uo/X/
+    - xform/o/C/
+    - xform/ru/H/
+    - xform/uu/P/
+    - xform/u/Z/
+    - xform/([QrYUIOPHJKL;NM])i/$1A/
+    - xform/([QrYUIOPHJKL;NM])y/$1Q/
+    - xform/i/;/
+    - xform/y/P/
+    - xform/[jr]//
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
+    - xform/([\w;][\w;])r/$1N平/
+    - xform/([\w;][\w;])e/$1N上/
+    - xform/([\w;][\w;])w/$1N去/
+    - xform/([\w;][\w;])q/$1N入/
+    - xform/([\w;][\w;])f/$1Q平/
+    - xform/([\w;][\w;])d/$1Q上/
+    - xform/([\w;][\w;])s/$1Q去/
+    - xform/([\w;][\w;])a/$1Q入/
+    - xform/([\w;][\w;])v/$1M平/
+    - xform/([\w;][\w;])c/$1M上/
+    - xform/([\w;][\w;])x/$1M去/
+    - xform/([\w;][\w;])z/$1M入/
+    - xform/([\w;][\w;])u/$1I平/
+    - xform/([\w;][\w;])i/$1I上/
+    - xform/([\w;][\w;])o/$1I去/
+    - xform/([\w;][\w;])p/$1D去/
+    - xform/([\w;][\w;])j/$1O平/
+    - xform/([\w;][\w;])k/$1O上/
+    - xform/([\w;][\w;])l/$1O去/
+    - xform/([\w;][\w;])m/$1U平/
+    - xform/([\w;][\w;])g/$1U上/
+    - xform/([\w;][\w;])h/$1U去/
+    - xform/(^|[ '])t([ioklrtfgvbaq]|[ph]Q)/$1徹$2/
+    - xform/(^|[ '])r([ioklrtfgvbaq]|[ph]Q)/$1知$2/
+    - xform/(^|[ '])e([ioklrtfgvbaq]|[ph]Q)/$1澄$2/
+    - xform/(^|[ '])w([ioklrtfgvbaq]|[ph]Q)/$1娘$2/
+    - xform/(^|[ '])w([yuhjnmp;])/$1日$2/
+    - xform/(^|[ '])t/$1透/
+    - xform/(^|[ '])r/$1端/
+    - xform/(^|[ '])e/$1定/
+    - xform/(^|[ '])w/$1泥/
+    - xform/(^|[ '])q/$1來/
+    - xform/(^|[ '])g([ioklrtfgvbaq]|[ph]Q)/$1初$2/
+    - xform/(^|[ '])f([ioklrtfgvbaq]|[ph]Q)/$1莊$2/
+    - xform/(^|[ '])d([ioklrtfgvbaq]|[ph]Q)/$1崇$2/
+    - xform/(^|[ '])s([ioklrtfgvbaq]|[ph]Q)/$1生$2/
+    - xform/(^|[ '])a([ioklrtfgvbaq]|[ph]Q)/$1俟$2/
+    - xform/(^|[ '])g/$1清/
+    - xform/(^|[ '])f/$1精/
+    - xform/(^|[ '])d/$1從/
+    - xform/(^|[ '])s/$1心/
+    - xform/(^|[ '])a/$1邪/
+    - xform/(^|[ '])b/$1昌/
+    - xform/(^|[ '])v/$1章/
+    - xform/(^|[ '])c/$1常/
+    - xform/(^|[ '])x/$1書/
+    - xform/(^|[ '])z/$1船/
+    - xform/(^|[ '])y/$1滂/
+    - xform/(^|[ '])u/$1幫/
+    - xform/(^|[ '])i/$1並/
+    - xform/(^|[ '])o/$1明/
+    - xform/(^|[ '])p([yuhjnm;p])/$1以$2/
+    - xform/(^|[ '])p/$1云/
+    - xform/(^|[ '])h/$1溪/
+    - xform/(^|[ '])j/$1見/
+    - xform/(^|[ '])k/$1羣/
+    - xform/(^|[ '])l/$1疑/
+    - xform/(^|[ ']);/$1影/
+    - xform/(^|[ '])n/$1匣/
+    - xform/(^|[ '])m/$1曉/
+    - xform/dO/歌/
+    - xform/sO/¹ʷ戈/
+    - xform/([见溪羣疑])[fj]O/$1³戈/
+    - xform/[gh]O/³ʷ戈/
+    - xform/kO/²麻/
+    - xform/lO/²ʷ麻/
+    - xform/[fj]O/³麻/
+    - xform/cO/模/
+    - xform/[vm]O/魚/
+    - xform/[bn]O/虞/
+    - xform/dI/咍/
+    - xform/sI/灰/
+    - xform/kI/皆/
+    - xform/lI/ʷ皆/
+    - xform/iO/佳/
+    - xform/oO/ʷ佳/
+    - xform/eO/齊/
+    - xform/wO/ʷ齊/
+    - xform/dD/泰/
+    - xform/sD/ʷ泰/
+    - xform/kD/夬/
+    - xform/lD/ʷ夬/
+    - xform/[fj]D/廢/
+    - xform/[gh]D/ʷ廢/
+    - xform/([幫滂並明見溪羣疑影曉])rD/$1ᴮ祭/
+    - xform/([幫滂並明見溪羣疑影曉])uD/$1ᴬ祭/
+    - xform/[ru]D/祭/
+    - xform/([幫滂並明見溪羣疑影曉])tD/$1ᴮʷ祭/
+    - xform/([幫滂並明見溪羣疑影曉])yD/$1ᴬʷ祭/
+    - xform/[ty]D/ʷ祭/
+    - xform/([幫滂並明見溪羣疑影曉])rO/$1ᴮ支/
+    - xform/([幫滂並明見溪羣疑影曉])uO/$1ᴬ支/
+    - xform/[ru]O/支/
+    - xform/([幫滂並明見溪羣疑影曉])tO/$1ᴮʷ支/
+    - xform/([幫滂並明見溪羣疑影曉])yO/$1ᴬʷ支/
+    - xform/[ty]O/ʷ支/
+    - xform/([幫滂並明見溪羣疑影曉])aI/$1ᴮ脂/
+    - xform/([幫滂並明見溪羣疑影曉]);I/$1ᴬ脂/
+    - xform/[a;]I/脂/
+    - xform/([幫滂並明見溪羣疑影曉])qI/$1ᴮʷ脂/
+    - xform/([幫滂並明見溪羣疑影曉])pI/$1ᴬʷ脂/
+    - xform/[qp]I/ʷ脂/
+    - xform/[a;]O/之/
+    - xform/[ru]I/微/
+    - xform/[ty]I/ʷ微/
+    - xform/dU/豪/
+    - xform/kU/肴/
+    - xform/([幫滂並明見溪羣疑影曉])rU/$1ᴮ宵/
+    - xform/([幫滂並明見溪羣疑影曉])uU/$1ᴬ宵/
+    - xform/[ru]U/宵/
+    - xform/eU/蕭/
+    - xform/cU/侯/
+    - xform/[vm]U/尤/
+    - xform/[fj]U/幽/
+    - xform/dM/談/
+    - xform/cM/覃/
+    - xform/kM/銜/
+    - xform/iM/鹹/
+    - xform/([幫滂並明見溪羣疑影曉])rM/$1ᴮ鹽/
+    - xform/([幫滂並明見溪羣疑影曉])uM/$1ᴬ鹽/
+    - xform/[ru]M/鹽/
+    - xform/[fj]M/嚴/
+    - xform/[gh]M/凡/
+    - xform/eM/添/
+    - xform/([幫滂並明見溪羣疑影曉])aM/$1ᴮ侵/
+    - xform/([幫滂並明見溪羣疑影曉]);M/$1ᴬ侵/
+    - xform/[a;]M/侵/
+    - xform/dN/寒/
+    - xform/sN/桓/
+    - xform/kN/刪/
+    - xform/lN/ʷ刪/
+    - xform/iN/山/
+    - xform/oN/ʷ山/
+    - xform/[fj]N/元/
+    - xform/[gh]N/ʷ元/
+    - xform/([幫滂並明見溪羣疑影曉])rN/$1ᴮ仙/
+    - xform/([幫滂並明見溪羣疑影曉])uN/$1ᴬ仙/
+    - xform/[ru]N/仙/
+    - xform/([幫滂並明見溪羣疑影曉])tN/$1ᴮʷ仙/
+    - xform/([幫滂並明見溪羣疑影曉])yN/$1ᴬʷ仙/
+    - xform/[ty]N/ʷ仙/
+    - xform/eN/先/
+    - xform/wN/ʷ先/
+    - xform/cN/痕/
+    - xform/xN/魂/
+    - xform/[vm]N/欣/
+    - xform/[bn]N/文/
+    - xform/([莊崇初生俟])[a;]N/$1臻/
+    - xform/([幫滂並明見溪羣疑影曉])aN/$1ᴮ真/
+    - xform/([幫滂並明見溪羣疑影曉]);N/$1ᴬ真/
+    - xform/[a;]N/真/
+    - xform/([幫滂並明見溪羣疑影曉])qN/$1ᴮʷ真/
+    - xform/[qp]N/諄/
+    - xform/dQ/唐/
+    - xform/sQ/ʷ唐/
+    - xform/[fj]Q/陽/
+    - xform/gQ/ʷ陽/
+    - xform/hQ/江/
+    - xform/kQ/²庚/
+    - xform/lQ/²ʷ庚/
+    - xform/iQ/耕/
+    - xform/oQ/ʷ耕/
+    - xform/([幫滂並明見溪羣疑影曉])rQ/$1³庚/
+    - xform/([幫滂並明見溪羣疑影曉])tQ/$1³ʷ庚/
+    - xform/[ru]Q/清/
+    - xform/[ty]Q/ʷ清/
+    - xform/eQ/青/
+    - xform/wQ/ʷ青/
+    - xform/cQ/登/
+    - xform/xQ/ʷ登/
+    - xform/[a;]Q/蒸/
+    - xform/qQ/ʷ蒸/
+    - xform/zQ/¹東/
+    - xform/[vm]Q/³東/
+    - xform/pQ/冬/
+    - xform/[bn]Q/鍾/
+    - xform/平//
+    - xform/([祭泰夬废])去/$1/
+    - xform/歌上/哿/
+    - xform/歌去/个/
+    - xform/戈上/果/
+    - xform/戈去/过/
+    - xform/麻上/马/
+    - xform/麻去/祃/
+    - xform/模上/姥/
+    - xform/模去/暮/
+    - xform/魚上/語/
+    - xform/魚去/御/
+    - xform/虞上/麌/
+    - xform/虞去/遇/
+    - xform/咍上/海/
+    - xform/咍去/代/
+    - xform/灰上/贿/
+    - xform/灰去/隊/
+    - xform/佳上/蟹/
+    - xform/佳去/卦/
+    - xform/皆上/骇/
+    - xform/皆去/怪/
+    - xform/齊上/薺/
+    - xform/齊去/霽/
+    - xform/之上/止/
+    - xform/之去/志/
+    - xform/脂上/旨/
+    - xform/脂去/至/
+    - xform/支上/纸/
+    - xform/支去/寘/
+    - xform/微上/尾/
+    - xform/微去/未/
+    - xform/豪上/皓/
+    - xform/豪去/号/
+    - xform/肴上/巧/
+    - xform/肴去/效/
+    - xform/宵上/小/
+    - xform/宵去/笑/
+    - xform/蕭上/筱/
+    - xform/蕭去/嘯/
+    - xform/侯上/厚/
+    - xform/侯去/候/
+    - xform/尤上/有/
+    - xform/尤去/又/
+    - xform/幽上/黝/
+    - xform/幽去/幼/
+    - xform/寒上/旱/
+    - xform/寒去/翰/
+    - xform/寒入/曷/
+    - xform/桓上/缓/
+    - xform/桓去/换/
+    - xform/桓入/末/
+    - xform/刪上/潸/
+    - xform/刪去/諫/
+    - xform/刪入/鎋/
+    - xform/山上/產/
+    - xform/山去/襉/
+    - xform/山入/黠/
+    - xform/元上/阮/
+    - xform/元去/愿/
+    - xform/元入/月/
+    - xform/仙上/鮮/
+    - xform/仙去/線/
+    - xform/仙入/薛/
+    - xform/先上/銑/
+    - xform/先去/霰/
+    - xform/先入/屑/
+    - xform/痕上/很/
+    - xform/痕去/恨/
+    - xform/痕入/紇/
+    - xform/魂上/混/
+    - xform/魂去/慁/
+    - xform/魂入/沒/
+    - xform/真上/診/
+    - xform/真去/震/
+    - xform/真入/質/
+    - xform/臻上/？/
+    - xform/臻去/？/
+    - xform/臻入/櫛/
+    - xform/諄上/準/
+    - xform/諄去/稕/
+    - xform/諄入/術/
+    - xform/欣上/隱/
+    - xform/欣去/焮/
+    - xform/欣入/迄/
+    - xform/文上/吻/
+    - xform/文去/問/
+    - xform/文入/物/
+    - xform/談上/敢/
+    - xform/談去/闞/
+    - xform/談入/盍/
+    - xform/覃上/感/
+    - xform/覃去/勘/
+    - xform/覃入/合/
+    - xform/銜上/檻/
+    - xform/銜去/鑑/
+    - xform/銜入/狎/
+    - xform/鹹上/豏/
+    - xform/鹹去/陷/
+    - xform/鹹入/洽/
+    - xform/嚴上/儼/
+    - xform/嚴去/釅/
+    - xform/嚴入/業/
+    - xform/鹽上/琰/
+    - xform/鹽去/豔/
+    - xform/鹽入/葉/
+    - xform/凡上/范/
+    - xform/凡去/梵/
+    - xform/凡入/乏/
+    - xform/添上/忝/
+    - xform/添去/㮇/
+    - xform/添入/帖/
+    - xform/侵上/寢/
+    - xform/侵去/沁/
+    - xform/侵入/緝/
+    - xform/唐上/蕩/
+    - xform/唐去/宕/
+    - xform/唐入/鐸/
+    - xform/陽上/養/
+    - xform/陽去/樣/
+    - xform/陽入/藥/
+    - xform/江上/講/
+    - xform/江去/絳/
+    - xform/江入/覺/
+    - xform/庚上/梗/
+    - xform/庚去/敬/
+    - xform/庚入/陌/
+    - xform/耕上/耿/
+    - xform/耕去/諍/
+    - xform/耕入/麥/
+    - xform/清上/靜/
+    - xform/清去/淨/
+    - xform/清入/昔/
+    - xform/青上/迥/
+    - xform/青去/徑/
+    - xform/青入/錫/
+    - xform/登上/等/
+    - xform/登去/嶝/
+    - xform/登入/德/
+    - xform/蒸上/拯/
+    - xform/蒸去/證/
+    - xform/蒸入/職/
+    - xform/東上/懂/
+    - xform/東去/送/
+    - xform/東入/屋/
+    - xform/冬上/湩/
+    - xform/冬去/宋/
+    - xform/冬入/沃/
+    - xform/鍾上/腫/
+    - xform/鍾去/用/
+    - xform/鍾入/燭/
