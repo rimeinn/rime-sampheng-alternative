@@ -26,6 +26,7 @@ patch:
     - xform/([iy])oi/$1ei/
     - xform/([^aeo])u([xh]?)($| )/$1ou$2$3/
     - xform/y([xh]?)($| )/iau$1$2/
+    - xform/iik($| )/jik$1/
     - xform/(^| )ph/$1Y/
     - xform/(^| )p/$1U/
     - xform/(^| )b/$1I/
@@ -130,21 +131,21 @@ patch:
     - xform/([\w;][\w;])m/$1U平/
     - xform/([\w;][\w;])g/$1U上/
     - xform/([\w;][\w;])h/$1U去/
-    - xform/(^|[ '])t([ioklrtfgvbaq]|[ph]Q)/$1徹$2/
-    - xform/(^|[ '])r([ioklrtfgvbaq]|[ph]Q)/$1知$2/
-    - xform/(^|[ '])e([ioklrtfgvbaq]|[ph]Q)/$1澄$2/
-    - xform/(^|[ '])w([ioklrtfgvbaq]|[ph]Q)/$1娘$2/
+    - xform/(^|[ '])t([ioklrtfgvbaq]|hQ)/$1徹$2/
+    - xform/(^|[ '])r([ioklrtfgvbaq]|hQ)/$1知$2/
+    - xform/(^|[ '])e([ioklrtfgvbaq]|hQ)/$1澄$2/
+    - xform/(^|[ '])w([ioklrtfgvbaq]|hQ)/$1娘$2/
     - xform/(^|[ '])w([yuhjnmp;])/$1日$2/
     - xform/(^|[ '])t/$1透/
     - xform/(^|[ '])r/$1端/
     - xform/(^|[ '])e/$1定/
     - xform/(^|[ '])w/$1泥/
     - xform/(^|[ '])q/$1來/
-    - xform/(^|[ '])g([ioklrtfgvbaq]|[ph]Q)/$1初$2/
-    - xform/(^|[ '])f([ioklrtfgvbaq]|[ph]Q)/$1莊$2/
-    - xform/(^|[ '])d([ioklrtfgvbaq]|[ph]Q)/$1崇$2/
-    - xform/(^|[ '])s([ioklrtfgvbaq]|[ph]Q)/$1生$2/
-    - xform/(^|[ '])a([ioklrtfgvbaq]|[ph]Q)/$1俟$2/
+    - xform/(^|[ '])g([ioklrtfgvbaq]|hQ)/$1初$2/
+    - xform/(^|[ '])f([ioklrtfgvbaq]|hQ)/$1莊$2/
+    - xform/(^|[ '])d([ioklrtfgvbaq]|hQ)/$1崇$2/
+    - xform/(^|[ '])s([ioklrtfgvbaq]|hQ)/$1生$2/
+    - xform/(^|[ '])a([ioklrtfgvbaq]|hQ)/$1俟$2/
     - xform/(^|[ '])g/$1清/
     - xform/(^|[ '])f/$1精/
     - xform/(^|[ '])d/$1從/
@@ -278,6 +279,8 @@ patch:
     - xform/wQ/ʷ青/
     - xform/cQ/登/
     - xform/xQ/ʷ登/
+    - xform/([幫滂並明見溪羣疑影曉])aQ/$1ᴮ蒸/
+    - xform/([幫滂並明見溪羣疑影曉]);Q/$1ᴬ蒸/
     - xform/[a;]Q/蒸/
     - xform/qQ/ʷ蒸/
     - xform/zQ/¹東/
@@ -461,6 +464,7 @@ patch:
     - xform/([iy])oi/$1ei/
     - xform/([^aeo])u([xh]?)($| )/$1ou$2$3/
     - xform/y([xh]?)($| )/iau$1$2/
+    - xform/iik($| )/jik$1/
     - xform/(^| )ph/$1Y/
     - xform/(^| )p/$1U/
     - xform/(^| )b/$1I/
@@ -563,21 +567,21 @@ patch:
     - xform/([\w;][\w;])m/$1U平/
     - xform/([\w;][\w;])g/$1U上/
     - xform/([\w;][\w;])h/$1U去/
-    - xform/(^|[ '])t([ioklrtfgvbaq]|[ph]Q)/$1徹$2/
-    - xform/(^|[ '])r([ioklrtfgvbaq]|[ph]Q)/$1知$2/
-    - xform/(^|[ '])e([ioklrtfgvbaq]|[ph]Q)/$1澄$2/
-    - xform/(^|[ '])w([ioklrtfgvbaq]|[ph]Q)/$1娘$2/
+    - xform/(^|[ '])t([ioklrtfgvbaq]|hQ)/$1徹$2/
+    - xform/(^|[ '])r([ioklrtfgvbaq]|hQ)/$1知$2/
+    - xform/(^|[ '])e([ioklrtfgvbaq]|hQ)/$1澄$2/
+    - xform/(^|[ '])w([ioklrtfgvbaq]|hQ)/$1娘$2/
     - xform/(^|[ '])w([yuhjnmp;])/$1日$2/
     - xform/(^|[ '])t/$1透/
     - xform/(^|[ '])r/$1端/
     - xform/(^|[ '])e/$1定/
     - xform/(^|[ '])w/$1泥/
     - xform/(^|[ '])q/$1來/
-    - xform/(^|[ '])g([ioklrtfgvbaq]|[ph]Q)/$1初$2/
-    - xform/(^|[ '])f([ioklrtfgvbaq]|[ph]Q)/$1莊$2/
-    - xform/(^|[ '])d([ioklrtfgvbaq]|[ph]Q)/$1崇$2/
-    - xform/(^|[ '])s([ioklrtfgvbaq]|[ph]Q)/$1生$2/
-    - xform/(^|[ '])a([ioklrtfgvbaq]|[ph]Q)/$1俟$2/
+    - xform/(^|[ '])g([ioklrtfgvbaq]|hQ)/$1初$2/
+    - xform/(^|[ '])f([ioklrtfgvbaq]|hQ)/$1莊$2/
+    - xform/(^|[ '])d([ioklrtfgvbaq]|hQ)/$1崇$2/
+    - xform/(^|[ '])s([ioklrtfgvbaq]|hQ)/$1生$2/
+    - xform/(^|[ '])a([ioklrtfgvbaq]|hQ)/$1俟$2/
     - xform/(^|[ '])g/$1清/
     - xform/(^|[ '])f/$1精/
     - xform/(^|[ '])d/$1從/
@@ -711,6 +715,8 @@ patch:
     - xform/wQ/ʷ青/
     - xform/cQ/登/
     - xform/xQ/ʷ登/
+    - xform/([幫滂並明見溪羣疑影曉])aQ/$1ᴮ蒸/
+    - xform/([幫滂並明見溪羣疑影曉]);Q/$1ᴬ蒸/
     - xform/[a;]Q/蒸/
     - xform/qQ/ʷ蒸/
     - xform/zQ/¹東/
